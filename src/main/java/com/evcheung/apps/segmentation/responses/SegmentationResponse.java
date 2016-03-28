@@ -1,4 +1,4 @@
-package com.evcheung.apps.segmentation.controllers;
+package com.evcheung.apps.segmentation.responses;
 
 import java.util.ArrayList;
 

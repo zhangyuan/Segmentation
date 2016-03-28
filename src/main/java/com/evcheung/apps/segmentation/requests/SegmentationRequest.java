@@ -1,4 +1,4 @@
-package com.evcheung.apps.segmentation.controllers;
+package com.evcheung.apps.segmentation.requests;
 
 public class SegmentationRequest {
     public String getText() {

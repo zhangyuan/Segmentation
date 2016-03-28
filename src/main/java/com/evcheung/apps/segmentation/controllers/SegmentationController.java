@@ -1,5 +1,8 @@
 package com.evcheung.apps.segmentation.controllers;
 
+import com.evcheung.apps.segmentation.responses.DataResponse;
+import com.evcheung.apps.segmentation.responses.SegmentationResponse;
+import com.evcheung.apps.segmentation.requests.SegmentationRequest;
 import com.evcheung.apps.segmentation.services.SegmentationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
