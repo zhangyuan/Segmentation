@@ -9,9 +9,14 @@ import java.util.ArrayList;
 
 @Component
 public class SegmentationService {
-    public ArrayList<String> mmseg(String text) throws IOException {
+    private final ComplexSeg seg;
+
+    public SegmentationService() {
         Dictionary dic = Dictionary.getInstance();
-        Seg seg = new ComplexSeg(dic);
+        seg = new ComplexSeg(dic);
+    }
+
+    public ArrayList<String> mmseg(String text) throws IOException {
         MMSeg mmSeg = new MMSeg(new StringReader(text), seg);
 
         ArrayList<String> segmentation = new ArrayList<String>();
