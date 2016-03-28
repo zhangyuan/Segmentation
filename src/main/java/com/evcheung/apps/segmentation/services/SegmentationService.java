@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 @Component
 public class SegmentationService {
-    public ArrayList<String> getSegmentation(String text) throws IOException {
+    public ArrayList<String> mmseg(String text) throws IOException {
         Dictionary dic = Dictionary.getInstance();
         Seg seg = new ComplexSeg(dic);
         MMSeg mmSeg = new MMSeg(new StringReader(text), seg);

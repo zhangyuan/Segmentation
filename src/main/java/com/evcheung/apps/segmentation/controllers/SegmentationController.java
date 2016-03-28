@@ -20,7 +20,7 @@ public class SegmentationController {
 
     @RequestMapping(method = RequestMethod.POST, headers ={"Accept=application/json"}, produces =  "application/json;charset=UTF-8")
     public DataResponse create(@RequestBody SegmentationRequest request) throws IOException {
-        ArrayList<String> segmentation = segmentationService.getSegmentation(request.getText());
+        ArrayList<String> segmentation = segmentationService.mmseg(request.getText());
 
         SegmentationResponse segmentationResponse = new SegmentationResponse();
         segmentationResponse.setSegments(segmentation);
