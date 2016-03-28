@@ -44,7 +44,7 @@ public class SegmentationControllerTest {
         payload.put("text", "天空一无所有,为何给我安慰");
         String content = mapper.writeValueAsString(payload);
 
-        ResultActions perform = mockMvc.perform(post("/segmentation").content(content).contentType(MediaType.APPLICATION_JSON_VALUE));
+        ResultActions perform = mockMvc.perform(post("/segmentation/mmseg").content(content).contentType(MediaType.APPLICATION_JSON_VALUE));
         perform
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.status").value(0))

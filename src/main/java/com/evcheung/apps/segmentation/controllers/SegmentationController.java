@@ -21,8 +21,8 @@ public class SegmentationController {
     @Autowired
     private SegmentationService segmentationService;
 
-    @RequestMapping(method = RequestMethod.POST, headers ={"Accept=application/json"}, produces =  "application/json;charset=UTF-8")
-    public DataResponse create(@RequestBody SegmentationRequest request) throws IOException {
+    @RequestMapping(value = "mmseg", method = RequestMethod.POST, headers ={"Accept=application/json"}, produces =  "application/json;charset=UTF-8")
+    public DataResponse mmseg(@RequestBody SegmentationRequest request) throws IOException {
         ArrayList<String> segmentation = segmentationService.mmseg(request.getText());
 
         SegmentationResponse segmentationResponse = new SegmentationResponse();
